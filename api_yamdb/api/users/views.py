@@ -67,7 +67,7 @@ class UsersViewSet(viewsets.ModelViewSet):
 
     @user_information.mapping.patch
     def user_update(self, request):
-        """Обрабодка patch запроса /me"""
+        """Обработка patch запроса /me"""
         serializer = UpdateUsersSerializer(
             request.user, data=request.data, partial=True)
         serializer.is_valid(raise_exception=True)
